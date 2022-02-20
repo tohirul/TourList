@@ -35,6 +35,18 @@ function App() {
       </main>
     );
   }
+  if (tours.length === 0) {
+    return (
+      <main>
+        <h2 className="title">
+          We have no tours for now
+          <button className="btn" onClick={()=>{fetchTours()}}>
+            Refresh
+          </button>
+        </h2>
+      </main>
+    );
+  }
   if (!loading) {
     return (
       <main>
